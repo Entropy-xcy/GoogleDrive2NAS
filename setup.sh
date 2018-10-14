@@ -9,8 +9,11 @@ sudo apt-get install nfs-kernel-server samba -y
 
 echo 'Setting up smb..'
 sudo smbpasswd -a $USER
+sudo chmod 777 /etc/samba/smb.conf
 sudo echo "[gd_FUSE]" >> /etc/samba/smb.conf
 sudo echo "path = /home/$USER/googledrive" >> /etc/samba/smb.conf
 sudo echo "valid users = $USER" >> /etc/samba/smb.conf
 sudo echo "read only = no" >> /etc/samba/smb.conf
+
+sudo echo "/home/$USER/googledrive *(rw)"
 
