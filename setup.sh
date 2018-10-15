@@ -15,5 +15,5 @@ sudo echo "path = /home/$USER/googledrive" >> /etc/samba/smb.conf
 sudo echo "valid users = $USER" >> /etc/samba/smb.conf
 sudo echo "read only = no" >> /etc/samba/smb.conf
 
-sudo sed -i '$ a /home/'"$USER"'/googledrive *(rw,sync,no_subtree_check)' /etc/exports
+sudo sed -i '$ a /home/'"$USER"'/googledrive *(rw,sync,no_subtree_check,fsid=0)' /etc/exports
 
