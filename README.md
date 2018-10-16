@@ -21,6 +21,7 @@ ssh -X -Y <user>@<server_ip_address> -p <port>
 Then, on the server, we need first to clone the repository.
 ```bash
 sudo apt-get update 
+sudo apt-get install -y software-properties-common
 sudo apt-get install git -y
 git clone https://github.com/Entropy-xcy/GoogleDrive2NAS
 cd GoogleDrive2NAS
